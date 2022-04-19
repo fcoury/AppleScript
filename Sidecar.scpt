@@ -36,6 +36,7 @@ tell application "System Events"
     else
       repeat with cb in ccCheckboxes
         if cb contains "Disconnect" then
+          delay 0.5
           -- If one of the checkboxes has "Disconnect" in its name, Sidecar is already connected.
           set sidecarToggle to ((checkbox 1 of window "Control Center") whose title contains "Disconnect")
           -- Click the checkbox to disconnect Sidecar.
